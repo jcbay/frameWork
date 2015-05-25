@@ -9,7 +9,7 @@ import javax.servlet.ServletContextListener;
 /**
  * Created by Alex.Zhang on 2015/5/21.
  */
-public class SafeContextLoaderListener implements ServletContextListener{
+public final class SafeContextLoaderListener implements ServletContextListener{
 
     private final Logger log = Logger.getLogger(getClass());
 
@@ -19,8 +19,10 @@ public class SafeContextLoaderListener implements ServletContextListener{
     public void contextInitialized(final ServletContextEvent servletContextEvent) {
         try{
             this.delegate.contextInitialized(servletContextEvent);
+
+            log.info("WEBæ¡†æ¶æˆåŠŸå¯åŠ¨.");
         }catch (Throwable t) {
-            final String message = "¿ò¼ÜµÄSpring ContextLoaderListener³õÊ¼»¯Òì³£,spring context½«³õÊ¼»¯Ê§°Ü!";
+            final String message = "æ¡†æ¶çš„Spring ContextLoaderListeneråˆå§‹åŒ–å¼‚å¸¸,spring contextå°†åˆå§‹åŒ–å¤±è´¥!";
 
             log.error(message, t);
             System.err.println(message);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--对于批量操作则执行缓存-->
+        <setting name="defaultExecutorType" value="BATCH" />
+        <!--如果在25000秒未响应，则执行超时-->
+        <setting name="defaultStatementTimeout" value="25000" />
+        <!--全局是否启用延迟加载，如果禁用，则所有关联对象即时加载-->
+        <setting name="lazyLoadingEnabled" value="true" />
+        <!--全局是否开启缓存-->
+        <setting name="cacheEnabled" value="true" />
+        <!--是否允许多个结果集从一个单独的语句中返回-->
+        <setting name="multipleResultSetsEnabled" value="true" />
+        <!--是否允许使用标标签代替列名-->
+        <setting name="useColumnLabel" value="true" />
+        <!--是否允许JDBC使用生成的健-->
+        <setting name="useGeneratedKeys" value="true" />
+    </settings>
+</configuration>
