@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zz.framework.dao.ApplicationListMapper">
+
+
+    <select id="findByDeviceCode" resultType="applicationList" parameterType="String">
+        select * from mdm_applicationlist WHERE deviceCode=#{deviceCode}
+    </select>
+
+    <delete id="deleteByDeviceCode" parameterType="String">
+        delete from mdm_applicationlist
+        where deviceCode = #{deviceCode}
+    </delete>
+
+</mapper>

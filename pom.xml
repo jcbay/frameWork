@@ -101,6 +101,13 @@
     </dependency>
 
     <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.2.4</version>
+    </dependency>
+
+
+    <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>4.3.2</version>
@@ -126,6 +133,16 @@
       </plugin>
     </plugins>
 
+    <!--因为idea不会将src下的配置文件打包到classes，
+    所以需要指明将src目录下的xml文件打包到classes目录中,-->
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
 
   </build>
 </project>
