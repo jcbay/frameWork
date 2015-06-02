@@ -47,6 +47,11 @@
             <property name="dataSource" ref="dataSource"/>
             <property name="configLocation" value="classpath:mybatis_config/Configuration.xml" />
             <property name="typeAliasesPackage" value="com.zz.framework.entity" />
+            <property name="mapperLocations">
+                <list>
+                    <value>classpath*:mappings/*.xml</value>
+                </list>
+            </property>
         </bean>
 
         <!--session模板-->

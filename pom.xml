@@ -117,10 +117,13 @@
     <finalName>frameWork</finalName>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>utf-8</encoding>
         </configuration>
       </plugin>
       <plugin>
@@ -134,15 +137,25 @@
     </plugins>
 
     <!--因为idea不会将src下的配置文件打包到classes，
-    所以需要指明将src目录下的xml文件打包到classes目录中,-->
+    所以需要指明将src目录下的xml文件打包到classes目录中,
+    注释掉了，因为最后把所有xml文件放在了resource目录中
     <resources>
       <resource>
         <directory>src/main/java</directory>
         <includes>
           <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
         </includes>
       </resource>
     </resources>
+    -->
 
   </build>
 </project>
