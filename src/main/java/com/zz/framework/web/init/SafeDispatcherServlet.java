@@ -1,7 +1,6 @@
 package com.zz.framework.web.init;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.web.servlet.DispatcherServlet;
 

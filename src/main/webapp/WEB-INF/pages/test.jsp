@@ -11,6 +11,6 @@
     <title></title>
 </head>
 <body>
-  Hello ,Alex !  webcome:[ ${message} ]
+  Hello ,Alex !  welcome:[ ${message} ]
 </body>
 </html>
