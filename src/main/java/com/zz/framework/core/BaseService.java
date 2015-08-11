@@ -1,5 +1,7 @@
 package com.zz.framework.core;
 
+import com.zz.framework.dao.UserInfoMapper;
+
 import java.util.List;
 
 /**

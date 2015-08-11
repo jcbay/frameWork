@@ -17,4 +17,14 @@ public interface BaseMapper {
      */
     public <T> List<T> findAll() throws Exception;
 
+
+    /**
+     * 返回单个对象
+     * @param object
+     * @param <T>
+     * @return
+     * @throws Exception
+     */
+    public <T> T findSingle(Object object) throws Exception;
+
 }
